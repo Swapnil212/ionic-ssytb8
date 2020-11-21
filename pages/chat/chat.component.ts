@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import '../../assets/js/bootstrap.min.js';
 import '../../assets/js/jquery-3.3.1.slim.min.js';
-
 //import '../../assets/js/swipe.min.js';
 
 @Component({
