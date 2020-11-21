@@ -1,2 +1,10 @@
 @import '../../assets/css/lib/bootstrap.min.css';
 @import '../../assets/css/swipe.min.css';
+
+.card{
+  padding: 20px;
+  border-radius: 10px;
+}
+.icon{
+  padding-right: 2px;
+}

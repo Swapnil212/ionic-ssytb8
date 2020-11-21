@@ -1,64 +1,62 @@
-<html>
-  <body>
-    <ion-content>
-
-        <div class="layout">
-          <!-- Start of Sign In -->
-          <div class="main order-md-1">
-            <div class="start">
-              <div class="container">
-                <div class="col-md-12">
-                  <div class="content">
-                    <h1>Sign in to Swipe</h1>
-                    <div class="third-party">
-                      <button ion-button class="btn item bg-blue">
-                        <i class="material-icons">pages</i>
-                      </button>
-                      <button ion-button class="btn item bg-teal">
-                        <i class="material-icons">party_mode</i>
-                      </button>
-                      <button ion-button class="btn item bg-purple">
-                        <i class="material-icons">whatshot</i>
-                      </button>
-                    </div>
-                    <p>or use your email account:</p>
-                    <form>
-                      <ion-item class="form-group">
-                        <ion-input type="email" id="inputEmail" class="" placeholder="Email Address" required></ion-input>
-                        <button ion-button class="btn icon"><i class="material-icons">mail_outline</i></button>
-                      </ion-item>
-                      <ion-item class="form-group">
-                        <ion-input type="password" id="inputPassword" class="" placeholder="Password" required></ion-input>
-                        <button ion-button class="btn icon"><i class="material-icons">lock_outline</i></button>
-                      </ion-item>
-                      <button ion-button color="default" type="submit" class="btn button" formaction="index-2.html">Sign In</button>
-                      <ion-item class="callout">
-                        <span>Don't have account? <a href="sign-up.html">Create Account</a></span>
-                      </ion-item>
-                    </form>
-                  </div>
+<body>
+<ion-content class="start">
+  <main>
+    <!-- Start of Sign In -->
+    <div class="main order-md-1">
+      <div class="start">
+        <div class="container">
+          <ion-row>
+              <ion-col col-12>
+                <div class="content">
+                  <!-- Card -->
+                  <ion-card class="card">
+                    <!-- Card-Header 
+                    <ion-card-header>-->
+                      <ion-title>
+                        <h1>Sign in to Swipe</h1>
+                      </ion-title>
+                      <div class="third-party">
+                        <ion-icon name="logo-twitter" class="item bg-blue"></ion-icon>
+                        <ion-icon name="logo-facebook" class="item bg-teal">
+                        </ion-icon>
+                        <ion-icon name="logo-github" class="item bg-purple">
+                        </ion-icon>
+                      </div>
+                      <p>or use your email account:</p>
+                    <!--</ion-card-header>
+                     /Card-Header -->
+                    <!-- Card-Content 
+                    <ion-card-content>-->
+                      <!-- Form -->
+                      <form>
+                        <ion-item class="form-group">
+                          <ion-label>
+                            <ion-icon name="mail" class="icon"></ion-icon>
+                          </ion-label>
+                          <ion-input type="email" id="inputEmail" placeholder="Email Address" required></ion-input>
+                        </ion-item>
+                        <ion-item class="form-group">
+                          <ion-label>
+                            <ion-icon name="lock" class="icon"><i class="material-icons"></i></ion-icon>
+                          </ion-label>
+                          <ion-input type="password" id="inputPassword"  placeholder="Password" required></ion-input>
+                        </ion-item>
+                        <button ion-button round class="btn">Sign In</button>
+                        <div class="callout">
+                          <span>Don't have account? <a href="sign-up.html">Create Account</a></span>
+                        </div>
+                      </form>
+                      <!-- /Form -->
+                    <!--</ion-card-content>
+                     /Card-Content -->
+                  </ion-card> 
+                  <!-- /Card -->
                 </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Sign In -->
-          <!-- Start of Sidebar -->
-          <div class="aside order-md-2">
-            <div class="container">
-              <div class="col-md-12">
-                <div class="preference">
-                  <h2>Hello, Friend!</h2>
-                  <p>Enter your personal details and start your journey with Swipe today.</p>
-                  <a href="sign-up.html" class="btn button">Sign Up</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- End of Sidebar -->
-        </div> <!-- Layout -->
-    </ion-content>  
-  </body>
-  <script src="../../assets/js/bootstrap.min.js"></script>
-  <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
-  <script src="../../assets/js/swipe.min.js"></script>
-</html>    
+              </ion-col>  
+          </ion-row>  
+        </div>
+      </div>
+    </div>      
+  </main> 
+</ion-content>
+</body>
