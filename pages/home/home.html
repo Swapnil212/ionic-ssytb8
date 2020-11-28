@@ -3,15 +3,98 @@
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="layout">
+    <!-- Start of Navigation -->
+      <div class="sidebar" id="sidebar">
+					<div class="container">
+            <ion-row col-12>
+              <div class="search">
+                <form class="form-inline position-relative">
+                  <ion-searchbar animated showCancelButton="always"   placeholder="Search for people...">
+                  </ion-searchbar>
+                </form>
+              </div>
+            </ion-row>  
+            <ion-row>
+              <ion-col col-12>
+                <div class="list-group sort">
+                  <ion-segment [(ngModel)]="status">
+                    <ion-segment-button value="all">
+                      All
+                    </ion-segment-button>
+                    <ion-segment-button value="online">
+                      Online
+                    </ion-segment-button>
+                    <ion-segment-button value="Offline">
+                      Offline
+                    </ion-segment-button>
+                  </ion-segment>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-12>
+                <div class="list-group">
+                  <div [ngSwitch]="status">
+                    <ion-list *ngSwitchCase="'all'">
+                      <ion-card>
+                        <ion-item>
+                          <ion-avatar item-start>
+                            <img  class="avatar-md" src="https://www.templateshub.net/demo/swipe-chat-platform/dist/img/avatars/avatar-male-1.jpg">
+                            <div class="status">
+                              <ion-icon name="play" class="online">
+                              </ion-icon>
+                            </div>
+                          </ion-avatar>
+                          <ion-avatar class="cent" item-end>
+                            <ion-icon name="person-add"></ion-icon>
+                          </ion-avatar>
+
+                          <h2>Janette Dalton</h2>
+													<p>Sofia, Bulgaria</p>
+                        </ion-item>
+                      </ion-card>
+                    </ion-list>
+                  </div>
+                  <div [ngSwitch]="status">
+                    <ion-list *ngSwitchCase="'online'">
+                      <ion-card>
+                        <ion-item>
+                          <ion-avatar item-start>
+                            <img  class="avatar-md" src="https://www.templateshub.net/demo/swipe-chat-platform/dist/img/avatars/avatar-male-1.jpg">
+                            <div class="status">
+                              <ion-icon name="play" class="online">
+                              </ion-icon>
+                            </div>
+                          </ion-avatar>
+                          <h2>Swapnil Jadhav</h2>
+													<p>Pune, Maha</p>
+                        </ion-item>
+                      </ion-card>
+                    </ion-list>
+                  </div>
+                  <div [ngSwitch]="status">
+                    <ion-list *ngSwitchCase="'Offline'">
+                      <ion-card>
+                        <ion-item>
+                          <ion-avatar item-start>
+                            <img  class="avatar-md" src="https://www.templateshub.net/demo/swipe-chat-platform/dist/img/avatars/avatar-male-1.jpg">
+                            <div class="status">
+                              <ion-icon name="play" class="offline">
+                              </ion-icon>
+                            </div>
+                          </ion-avatar>
+                          <h2>Janette Dalton</h2>
+													<p>Sofia, Bulgaria</p>
+                        </ion-item>
+                      </ion-card>
+                    </ion-list>
+                  </div>
+                </div>   
+              </ion-col>
+            </ion-row>    
+          </div>
+      </div>    
+  </div>
 </ion-content>
