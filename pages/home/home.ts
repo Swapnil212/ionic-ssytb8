@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {Data} from './home.service';
 
 import '../../assets/js/bootstrap.min.js';
 import '../../assets/js/jquery-3.3.1.slim.min.js';
@@ -12,8 +13,18 @@ import '../../assets/js/jquery-3.3.1.slim.min.js';
 })
 export class HomePage {
   status: string = "all";
-  constructor(public navCtrl: NavController) {
+  searchTerm : any="";
+  jsonData : any;
 
+  constructor(public navCtrl: NavController
+  ,public data:Data) {
   }
 
+  ionViewDidLoad(){
+    this.setFilteredItems();
+  }
+
+  setFilteredItems() {
+    this.jsonData = this.data.filterItems(this.searchTerm);
+  }
 }
