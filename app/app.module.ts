@@ -8,7 +8,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ChatComponent } from '../pages/chat/chat.component';
-
+import { Data } from '../pages/home/home.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +34,7 @@ import { ChatComponent } from '../pages/chat/chat.component';
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler}
+    ,Data
   ]
 })
 export class AppModule {}

@@ -6,15 +6,17 @@
 <ion-content padding>
   <div class="layout">
     <!-- Start of Navigation -->
-      <div class="sidebar" id="sidebar">
+      <div>
 					<div class="container">
-            <ion-row col-12>
-              <div class="search">
-                <form class="form-inline position-relative">
-                  <ion-searchbar animated showCancelButton="always"   placeholder="Search for people...">
-                  </ion-searchbar>
-                </form>
-              </div>
+            <ion-row>
+              <ion-col col-12>
+                <div class="search">
+                  <div class="form-inline position-relative">
+                    <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="setFilteredItems()" showCancelButton="always"  placeholder="Search for people...">
+                    </ion-searchbar>
+                  </div>
+                </div>
+              </ion-col>
             </ion-row>  
             <ion-row>
               <ion-col col-12>
@@ -38,7 +40,7 @@
                 <div class="list-group">
                   <div [ngSwitch]="status">
                     <ion-list *ngSwitchCase="'all'">
-                      <ion-card>
+                      <ion-card *ngFor = "let data of jsonData">
                         <ion-item>
                           <ion-avatar item-start>
                             <img  class="avatar-md" src="https://www.templateshub.net/demo/swipe-chat-platform/dist/img/avatars/avatar-male-1.jpg">
@@ -51,8 +53,8 @@
                             <ion-icon name="person-add"></ion-icon>
                           </ion-avatar>
 
-                          <h2>Janette Dalton</h2>
-													<p>Sofia, Bulgaria</p>
+                          <h2>{{data.name}}</h2>
+													<p>{{data.location}}</p>
                         </ion-item>
                       </ion-card>
                     </ion-list>
